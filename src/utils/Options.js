@@ -9,9 +9,14 @@ export const pieOptions = {
     legend: {
       position: "bottom",
       labels: {
-        font: {
-          size: 10,
-          weight: "bold",
+        font: function (context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+          size = size > 10 ? 10 : size;
+          return {
+            weight: "bold",
+            size: size,
+          };
         },
         color: "white",
         padding: 10,
@@ -23,9 +28,14 @@ export const pieOptions = {
       formatter: (value) => {
         return `${value}`;
       },
-      font: {
-        size: 12,
-        weight: "bold",
+      font: function (context) {
+        var width = context.chart.width;
+        var size = Math.round(width / 32);
+        size = size > 12 ? 12 : size;
+        return {
+          weight: "bold",
+          size: size,
+        };
       },
       anchor: "center",
       align: "center",
@@ -38,9 +48,14 @@ export const barOptions = {
     legend: {
       position: "top",
       labels: {
-        font: {
-          size: 10,
-          weight: "bold",
+        font: function (context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+          size = size > 10 ? 10 : size;
+          return {
+            weight: "bold",
+            size: size,
+          };
         },
         color: "white",
       },
@@ -50,9 +65,14 @@ export const barOptions = {
       anchor: "end",
       align: "top",
       offset: -5,
-      font: {
-        size: 10,
-        weight: "bold",
+      font: function (context) {
+        var width = context.chart.width;
+        var size = Math.round(width / 32);
+        size = size > 10 ? 10 : size;
+        return {
+          weight: "bold",
+          size: size,
+        };
       },
       formatter: (value) => {
         return `${value}`;
@@ -65,9 +85,14 @@ export const barOptions = {
         display: true,
         text: "Manufacturers",
         color: "white",
-        font: {
-          size: 12,
-          weight: "bold",
+        font: function (context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+          size = size > 12 ? 12 : size;
+          return {
+            weight: "bold",
+            size: size,
+          };
         },
       },
       ticks: {
@@ -79,9 +104,14 @@ export const barOptions = {
         display: true,
         text: "Number of Vehicles",
         color: "white",
-        font: {
-          size: 12,
-          weight: "bold",
+        font: function (context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+          size = size > 12 ? 12 : size;
+          return {
+            weight: "bold",
+            size: size,
+          };
         },
       },
       ticks: {
@@ -105,9 +135,14 @@ export const histogramOptions = {
     legend: {
       position: "top",
       labels: {
-        font: {
-          size: 10,
-          weight: "bold",
+        font: function (context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+          size = size > 10 ? 10 : size;
+          return {
+            weight: "bold",
+            size: size,
+          };
         },
         color: "white",
       },
@@ -115,9 +150,14 @@ export const histogramOptions = {
     datalabels: {
       display: true,
       color: "#fff",
-      font: {
-        size: 12,
-        weight: "bold",
+      font: function (context) {
+        var width = context.chart.width;
+        var size = Math.round(width / 32);
+        size = size > 12 ? 12 : size;
+        return {
+          weight: "bold",
+          size: size,
+        };
       },
       anchor: "end",
       align: "top",
@@ -131,9 +171,14 @@ export const histogramOptions = {
         display: true,
         text: "Electric Range (miles)",
         color: "white",
-        font: {
-          size: 12,
-          weight: "bold",
+        font: function (context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+          size = size > 12 ? 12 : size;
+          return {
+            weight: "bold",
+            size: size,
+          };
         },
       },
       ticks: {
@@ -145,9 +190,14 @@ export const histogramOptions = {
         display: true,
         text: "Number of Vehicles",
         color: "white",
-        font: {
-          size: 12,
-          weight: "bold",
+        font: function (context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+          size = size > 12 ? 12 : size;
+          return {
+            weight: "bold",
+            size: size,
+          };
         },
       },
       ticks: {
@@ -167,6 +217,7 @@ export const histogramOptions = {
 };
 
 export const lineOptions = {
+  responsive: true,
   animation: {
     duration: 1000,
     delay: (context) => context.dataIndex * 150,
@@ -193,9 +244,14 @@ export const lineOptions = {
     },
     datalabels: {
       color: "#fff",
-      font: {
-        size: 12,
-        weight: "bold",
+      font: function (context) {
+        var width = context.chart.width;
+        var size = Math.round(width / 32);
+        size = size > 12 ? 12 : size;
+        return {
+          weight: "bold",
+          size: size,
+        };
       },
       anchor: "end",
       align: "top",
@@ -209,9 +265,14 @@ export const lineOptions = {
         display: true,
         text: "Year",
         color: "white",
-        font: {
-          size: 12,
-          weight: "bold",
+        font: function (context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+          size = size > 12 ? 12 : size;
+          return {
+            weight: "bold",
+            size: size,
+          };
         },
       },
       ticks: {
@@ -223,9 +284,14 @@ export const lineOptions = {
         display: true,
         text: "Number of Registrations",
         color: "white",
-        font: {
-          size: 12,
-          weight: "bold",
+        font: function (context) {
+          var width = context.chart.width;
+          var size = Math.round(width / 32);
+          size = size > 12 ? 12 : size;
+          return {
+            weight: "bold",
+            size: size,
+          };
         },
       },
       ticks: {

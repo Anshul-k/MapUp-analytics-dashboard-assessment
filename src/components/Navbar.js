@@ -3,11 +3,11 @@ import React from "react";
 const Navbar = () => {
   const downloadCSV = () => {
     const link = document.createElement("a");
-    link.href = "/data-to-visualize/Electric_Vehicle_Population_Data.csv"; // Link to the CSV file in the public folder
-    link.setAttribute("download", "EV Dataset.csv"); // Setting the download attribute
+    link.href = "/data-to-visualize/Electric_Vehicle_Population_Data.csv";
+    link.setAttribute("download", "EV Dataset.csv");
     document.body.appendChild(link);
-    link.click(); // Simulating click to trigger download
-    document.body.removeChild(link); // Clean up
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
